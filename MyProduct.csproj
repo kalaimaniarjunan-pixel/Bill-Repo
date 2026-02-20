@@ -1,0 +1,637 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<Project ToolsVersion="4.0" DefaultTargets="Build" xmlns="http://schemas.microsoft.com/developer/msbuild/2003">
+  <PropertyGroup>
+    <Configuration Condition=" '$(Configuration)' == '' ">Debug</Configuration>
+    <Platform Condition=" '$(Platform)' == '' ">x86</Platform>
+    <ProductVersion>8.0.30703</ProductVersion>
+    <SchemaVersion>2.0</SchemaVersion>
+    <ProjectGuid>{DF845A1B-6048-4725-8E57-A19C227A03E4}</ProjectGuid>
+    <OutputType>WinExe</OutputType>
+    <AppDesignerFolder>Properties</AppDesignerFolder>
+    <RootNamespace>HospitalManagement</RootNamespace>
+    <AssemblyName>HospitalManagement</AssemblyName>
+    <TargetFrameworkVersion>v4.0</TargetFrameworkVersion>
+    <TargetFrameworkProfile>Client</TargetFrameworkProfile>
+    <FileAlignment>512</FileAlignment>
+  </PropertyGroup>
+  <PropertyGroup Condition=" '$(Configuration)|$(Platform)' == 'Debug|x86' ">
+    <PlatformTarget>x86</PlatformTarget>
+    <DebugSymbols>true</DebugSymbols>
+    <DebugType>full</DebugType>
+    <Optimize>false</Optimize>
+    <OutputPath>bin\Debug\</OutputPath>
+    <DefineConstants>DEBUG;TRACE</DefineConstants>
+    <ErrorReport>prompt</ErrorReport>
+    <WarningLevel>4</WarningLevel>
+  </PropertyGroup>
+  <PropertyGroup Condition=" '$(Configuration)|$(Platform)' == 'Release|x86' ">
+    <PlatformTarget>x86</PlatformTarget>
+    <DebugType>pdbonly</DebugType>
+    <Optimize>true</Optimize>
+    <OutputPath>bin\Release\</OutputPath>
+    <DefineConstants>TRACE</DefineConstants>
+    <ErrorReport>prompt</ErrorReport>
+    <WarningLevel>4</WarningLevel>
+  </PropertyGroup>
+  <PropertyGroup>
+    <ApplicationIcon>ApalisLogo.ico</ApplicationIcon>
+  </PropertyGroup>
+  <ItemGroup>
+    <Reference Include="itextsharp">
+      <HintPath>..\..\itextsharp.dll</HintPath>
+    </Reference>
+    <Reference Include="Microsoft.Office.Interop.Excel, Version=14.0.0.0, Culture=neutral, PublicKeyToken=71e9bce111e9429c, processorArchitecture=MSIL">
+      <EmbedInteropTypes>True</EmbedInteropTypes>
+    </Reference>
+    <Reference Include="Microsoft.ReportViewer.Common, Version=10.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a" />
+    <Reference Include="Microsoft.ReportViewer.WinForms, Version=10.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a, processorArchitecture=MSIL" />
+    <Reference Include="System" />
+    <Reference Include="System.configuration" />
+    <Reference Include="System.Core" />
+    <Reference Include="System.Web.Services" />
+    <Reference Include="System.Xml.Linq" />
+    <Reference Include="System.Data.DataSetExtensions" />
+    <Reference Include="Microsoft.CSharp" />
+    <Reference Include="System.Data" />
+    <Reference Include="System.Deployment" />
+    <Reference Include="System.Drawing" />
+    <Reference Include="System.Windows.Forms" />
+    <Reference Include="System.Xml" />
+  </ItemGroup>
+  <ItemGroup>
+    <Compile Include="Map\AdjustmentStockMap.cs" />
+    <Compile Include="Map\AttendanceMap.cs" />
+    <Compile Include="Map\BillDetailsMap.cs" />
+    <Compile Include="Map\BillMap.cs" />
+    <Compile Include="Map\CompanyMap.cs" />
+    <Compile Include="Map\VendorMap.cs" />
+    <Compile Include="Map\DoctorMap.cs" />
+    <Compile Include="Map\EBUnitMap.cs" />
+    <Compile Include="Map\EmployeeMap.cs" />
+    <Compile Include="Map\ExpensesDetailsMap.cs" />
+    <Compile Include="Map\ExpensesMap.cs" />
+    <Compile Include="Map\GRNDetailsMap.cs" />
+    <Compile Include="Map\GRNMap.cs" />
+    <Compile Include="Map\HospitalSessionObjects.cs" />
+    <Compile Include="Map\IssueEntryDetailMap.cs" />
+    <Compile Include="Map\IssueEntryMap.cs" />
+    <Compile Include="Map\LoginMap.cs" />
+    <Compile Include="Map\PatientMap.cs" />
+    <Compile Include="Map\ProductsMap.cs" />
+    <Compile Include="Map\ReportMap.cs" />
+    <Compile Include="Map\HospitalLicenseMap.cs" />
+    <Compile Include="Map\SalesReturnDetailMap.cs" />
+    <Compile Include="Map\SalesReturnMap.cs" />
+    <Compile Include="Map\SuppliersMap.cs" />
+    <Compile Include="Map\UserDefinedCategoryMap.cs" />
+    <Compile Include="Map\UserDefinedOptionMap.cs" />
+    <Compile Include="Pages\AboutHospitalApalis.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Pages\AboutHospitalApalis.Designer.cs">
+      <DependentUpon>AboutHospitalApalis.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Pages\AdjustmentStockEntry.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Pages\AdjustmentStockEntry.Designer.cs">
+      <DependentUpon>AdjustmentStockEntry.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Pages\Attendance.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Pages\Attendance.Designer.cs">
+      <DependentUpon>Attendance.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Pages\BillInformation.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Pages\BillInformation.Designer.cs">
+      <DependentUpon>BillInformation.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Pages\ChangePassword.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Pages\ChangePassword.Designer.cs">
+      <DependentUpon>ChangePassword.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Pages\Vendor.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Pages\Vendor.Designer.cs">
+      <DependentUpon>Vendor.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Pages\CreateLicense.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Pages\CreateLicense.Designer.cs">
+      <DependentUpon>CreateLicense.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Pages\DoctorInformation.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Pages\DoctorInformation.Designer.cs">
+      <DependentUpon>DoctorInformation.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Pages\EBUnit.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Pages\EBUnit.Designer.cs">
+      <DependentUpon>EBUnit.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Pages\EmployeeInformation.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Pages\EmployeeInformation.Designer.cs">
+      <DependentUpon>EmployeeInformation.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Pages\Expanses.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Pages\Expanses.Designer.cs">
+      <DependentUpon>Expanses.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Pages\GoodsReceipt.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Pages\GoodsReceipt.Designer.cs">
+      <DependentUpon>GoodsReceipt.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Pages\Home.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Pages\Home.Designer.cs">
+      <DependentUpon>Home.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Pages\HospiReportViewer.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Pages\HospiReportViewer.Designer.cs">
+      <DependentUpon>HospiReportViewer.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Pages\HospitalInformation.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Pages\HospitalInformation.Designer.cs">
+      <DependentUpon>HospitalInformation.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Pages\HospitalViewer.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Pages\HospitalViewer.Designer.cs">
+      <DependentUpon>HospitalViewer.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Pages\IssueEntry.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Pages\IssueEntry.Designer.cs">
+      <DependentUpon>IssueEntry.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Pages\Login.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Pages\Login.Designer.cs">
+      <DependentUpon>Login.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Pages\LookupDiseases.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Pages\LookupDiseases.Designer.cs">
+      <DependentUpon>LookupDiseases.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Pages\LookupProduct.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Pages\LookupProduct.Designer.cs">
+      <DependentUpon>LookupProduct.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Pages\PatientInformation.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Pages\PatientInformation.Designer.cs">
+      <DependentUpon>PatientInformation.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Pages\PatientReport.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Pages\PatientReport.Designer.cs">
+      <DependentUpon>PatientReport.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Pages\Product.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Pages\Product.Designer.cs">
+      <DependentUpon>Product.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Pages\SalesReturn.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Pages\SalesReturn.Designer.cs">
+      <DependentUpon>SalesReturn.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Pages\SearchPatient.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Pages\SearchPatient.Designer.cs">
+      <DependentUpon>SearchPatient.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Pages\SearchResult.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Pages\SearchResult.Designer.cs">
+      <DependentUpon>SearchResult.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Pages\Security.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Pages\Security.Designer.cs">
+      <DependentUpon>Security.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Pages\Suppliers.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Pages\Suppliers.Designer.cs">
+      <DependentUpon>Suppliers.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Pages\UserDefinedCategories.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Pages\UserDefinedCategories.Designer.cs">
+      <DependentUpon>UserDefinedCategories.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Pages\UserDefinedDiseases.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Pages\UserDefinedDiseases.Designer.cs">
+      <DependentUpon>UserDefinedDiseases.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Pages\ViewLog.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Pages\ViewLog.Designer.cs">
+      <DependentUpon>ViewLog.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Process\AdjustmentStockProcess.cs" />
+    <Compile Include="Process\AttendanceProcess.cs" />
+    <Compile Include="Process\BillProcess.cs" />
+    <Compile Include="Process\Common.cs" />
+    <Compile Include="Process\VendorProcess.cs" />
+    <Compile Include="Process\EBUnitProcess.cs" />
+    <Compile Include="Process\Expensesprocess.cs" />
+    <Compile Include="Process\GRNProcess.cs" />
+    <Compile Include="Process\HospitalProcess.cs" />
+    <Compile Include="Process\DoctorProcess.cs" />
+    <Compile Include="Process\EmployeeProcess.cs" />
+    <Compile Include="Process\IssueEntryProcess.cs" />
+    <Compile Include="Process\LoginProcess.cs" />
+    <Compile Include="Process\PatientProcess.cs" />
+    <Compile Include="Process\ProductsProcess.cs" />
+    <Compile Include="Process\ReportProcess.cs" />
+    <Compile Include="Process\HospitalCryptography.cs" />
+    <Compile Include="Process\HospitalLicenseProcess.cs" />
+    <Compile Include="Process\SalesReturnProcess.cs" />
+    <Compile Include="Process\SuppliersProcess.cs" />
+    <Compile Include="Process\UserDefinedCategoryProcess.cs" />
+    <Compile Include="Process\UserDefinedDiseasesProcess.cs" />
+    <Compile Include="Process\UserDefinedOptionProcess.cs" />
+    <Compile Include="Process\UserDefinedTestProcess.cs" />
+    <Compile Include="Program.cs" />
+    <Compile Include="Properties\AssemblyInfo.cs" />
+    <Compile Include="Helper\SqlHelper.cs" />
+    <EmbeddedResource Include="bk\PrintBill_Thermal.rdlc" />
+    <EmbeddedResource Include="Pages\AboutHospitalApalis.resx">
+      <DependentUpon>AboutHospitalApalis.cs</DependentUpon>
+      <SubType>Designer</SubType>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Pages\AdjustmentStockEntry.resx">
+      <DependentUpon>AdjustmentStockEntry.cs</DependentUpon>
+      <SubType>Designer</SubType>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Pages\Attendance.resx">
+      <DependentUpon>Attendance.cs</DependentUpon>
+      <SubType>Designer</SubType>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Pages\BillInformation.resx">
+      <DependentUpon>BillInformation.cs</DependentUpon>
+      <SubType>Designer</SubType>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Pages\ChangePassword.resx">
+      <DependentUpon>ChangePassword.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Pages\Vendor.resx">
+      <DependentUpon>Vendor.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Pages\CreateLicense.resx">
+      <DependentUpon>CreateLicense.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Pages\DoctorInformation.resx">
+      <DependentUpon>DoctorInformation.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Pages\EBUnit.resx">
+      <DependentUpon>EBUnit.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Pages\EmployeeInformation.resx">
+      <DependentUpon>EmployeeInformation.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Pages\Expanses.resx">
+      <DependentUpon>Expanses.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Pages\GoodsReceipt.resx">
+      <DependentUpon>GoodsReceipt.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Pages\Home.resx">
+      <DependentUpon>Home.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Pages\HospiReportViewer.resx">
+      <DependentUpon>HospiReportViewer.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Pages\HospitalInformation.resx">
+      <DependentUpon>HospitalInformation.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Pages\HospitalViewer.resx">
+      <DependentUpon>HospitalViewer.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Pages\IssueEntry.resx">
+      <DependentUpon>IssueEntry.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Pages\Login.resx">
+      <DependentUpon>Login.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Pages\LookupDiseases.resx">
+      <DependentUpon>LookupDiseases.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Pages\LookupProduct.resx">
+      <DependentUpon>LookupProduct.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Pages\PatientInformation.resx">
+      <DependentUpon>PatientInformation.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Pages\PatientReport.resx">
+      <DependentUpon>PatientReport.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Pages\Product.resx">
+      <DependentUpon>Product.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Pages\SalesReturn.resx">
+      <DependentUpon>SalesReturn.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Pages\SearchPatient.resx">
+      <DependentUpon>SearchPatient.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Pages\SearchResult.resx">
+      <DependentUpon>SearchResult.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Pages\Security.resx">
+      <DependentUpon>Security.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Pages\Suppliers.resx">
+      <DependentUpon>Suppliers.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Pages\UserDefinedCategories.resx">
+      <DependentUpon>UserDefinedCategories.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Pages\UserDefinedDiseases.resx">
+      <DependentUpon>UserDefinedDiseases.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Pages\ViewLog.resx">
+      <DependentUpon>ViewLog.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Properties\Resources.resx">
+      <Generator>ResXFileCodeGenerator</Generator>
+      <SubType>Designer</SubType>
+      <LastGenOutput>Resources.Designer.cs</LastGenOutput>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Reports\Billwise.rdlc" />
+    <EmbeddedResource Include="Reports\BillwisePatient.rdlc" />
+    <EmbeddedResource Include="Reports\CancelledBills.rdlc" />
+    <EmbeddedResource Include="Reports\Closingstock.rdlc" />
+    <EmbeddedResource Include="Reports\Daywise.rdlc" />
+    <EmbeddedResource Include="Reports\PatientReport.rdlc">
+      <SubType>Designer</SubType>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Reports\PrintBill.rdlc">
+      <SubType>Designer</SubType>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Reports\PrintBill_Thermal.rdlc" />
+    <EmbeddedResource Include="Reports\ProductSolds.rdlc" />
+    <EmbeddedResource Include="Reports\ProductsSoldBills.rdlc" />
+    <EmbeddedResource Include="Reports\StockSummary.rdlc" />
+    <None Include="App.config">
+      <SubType>Designer</SubType>
+    </None>
+    <None Include="Properties\Settings.settings">
+      <Generator>SettingsSingleFileGenerator</Generator>
+      <LastGenOutput>Settings.Designer.cs</LastGenOutput>
+    </None>
+    <Compile Include="Properties\Resources.Designer.cs">
+      <AutoGen>True</AutoGen>
+      <DesignTime>True</DesignTime>
+      <DependentUpon>Resources.resx</DependentUpon>
+    </Compile>
+    <Compile Include="Properties\Settings.Designer.cs">
+      <AutoGen>True</AutoGen>
+      <DependentUpon>Settings.settings</DependentUpon>
+      <DesignTimeSharedInput>True</DesignTimeSharedInput>
+    </Compile>
+  </ItemGroup>
+  <ItemGroup>
+    <WCFMetadata Include="Service References\" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\Bill.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\Patient.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\Doctor.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\employee.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\Categories.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\Logout.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\Add.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\Pencil.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\Printer.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\Search.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\Excel.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\Pdf.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\Delete.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\Printer1.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\1409743038_Print.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\PrinterNew.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\Cash_register.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\ApalisLogo.ico" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\key7.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\ApalisLogo0.PNG" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\Logo1.PNG" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\20170214_58a28e23853ae-210x210.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\user-512.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\user_male2-512.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\user-icon-2098873_960_720.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\1600.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\login.jpg" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\Login2.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\Login3.jpg" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\Login31.jpg" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\Apalis.PNG" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\ApalisLogo.PNG" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\Apalis1.PNG" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\Del1.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\Delete-file-icon.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\Delete_Icon.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\images.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\Delete_Icon1.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\Edit2.jpg" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\Edit3.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\Edit1.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\Add3.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <Content Include="ApalisLogo.ico" />
+    <None Include="Resources\home8.png" />
+    <None Include="Resources\home7.png" />
+    <None Include="Resources\Home6.png" />
+    <None Include="Resources\home5.png" />
+    <None Include="Resources\product16.png" />
+    <None Include="Resources\product15.png" />
+    <None Include="Resources\product13.jpg" />
+    <None Include="Resources\product12.png" />
+    <None Include="Resources\product11.png" />
+    <None Include="Resources\product10.png" />
+    <None Include="Resources\Product9.png" />
+    <None Include="Resources\product8.jpg" />
+    <None Include="Resources\product7.jpg" />
+    <None Include="Resources\product6.png" />
+    <None Include="Resources\logout7.png" />
+    <None Include="Resources\logout61.png" />
+    <None Include="Resources\logout6.png" />
+    <None Include="Resources\logout31.png" />
+    <None Include="Resources\logout4.jpg" />
+    <None Include="Resources\logout3.png" />
+    <None Include="Resources\Logout1.png" />
+    <None Include="Resources\product5.png" />
+    <None Include="Resources\Product3.png" />
+    <None Include="Resources\pdf5.jpg" />
+    <None Include="Resources\pdf7.png" />
+    <None Include="Resources\pdf6.jpg" />
+    <None Include="Resources\pdf3.png" />
+    <None Include="Resources\pdf1.png" />
+    <None Include="Resources\excel2.png" />
+    <None Include="Resources\excel1.jpg" />
+    <None Include="Resources\search14.png" />
+    <None Include="Resources\search13.png" />
+    <None Include="Resources\search11.png" />
+    <None Include="Resources\search10.png" />
+    <None Include="Resources\search9.png" />
+    <None Include="Resources\search8.png" />
+    <None Include="Resources\search7.png" />
+    <None Include="Resources\search41.png" />
+    <None Include="Resources\search3.png" />
+    <None Include="Resources\search-engine-optimisation-settings-17.png" />
+    <None Include="Resources\search5.png" />
+    <None Include="Resources\config_tool_icon_blue.png" />
+    <None Include="Resources\search4.png" />
+    <None Include="Resources\print4.png" />
+    <None Include="Resources\print.png" />
+    <None Include="Resources\print1.png" />
+    <None Include="Resources\User3.png" />
+    <None Include="Resources\blue_man.jpg" />
+    <None Include="Resources\User1.png" />
+    <None Include="Resources\product2.png" />
+    <None Include="Resources\Product1.png" />
+    <None Include="Resources\customer3.jpg" />
+    <None Include="Resources\customers2.jpg" />
+    <None Include="Resources\customer11.jpg" />
+    <None Include="Resources\customer1.jpg" />
+    <None Include="Resources\cart1.png" />
+    <None Include="Resources\Add6.png" />
+    <None Include="Resources\Add4.png" />
+    <None Include="Resources\Add2.ico" />
+    <None Include="Resources\Add5.png" />
+  </ItemGroup>
+  <Import Project="$(MSBuildToolsPath)\Microsoft.CSharp.targets" />
+  <!-- To modify your build process, add your task inside one of the targets below and uncomment it. 
+       Other similar extension points exist, see Microsoft.Common.targets.
+  <Target Name="BeforeBuild">
+  </Target>
+  <Target Name="AfterBuild">
+  </Target>
+  -->
+</Project>
